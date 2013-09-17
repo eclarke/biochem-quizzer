@@ -34,9 +34,9 @@ questions = {"question": ["What is the 3L code for {}?",
 compliments = pd.read_table('compliments.csv', sep=',')
 questions = pd.DataFrame(questions)
 while True:
-    row_idx = np.random.randint(0, len(aa_df) - 1)
-    q_idx = np.random.randint(0, len(questions) - 1)
-    compliment_idx = np.random.randint(0, len(compliments) - 1)
+    row_idx = np.random.randint(0, len(aa_df))
+    q_idx = np.random.randint(0, len(questions))
+    compliment_idx = np.random.randint(0, len(compliments))
     test_row = aa_df.irow(row_idx)
     q = questions.irow(q_idx)
     params = q["params"]
